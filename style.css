@@ -7,9 +7,32 @@ body {
   align-items: center;
 }
 
-.main-container {
+.game-container {
+  flex-direction: column;
+  max-height: 80%;
+  border: 40px solid red;
+  border-radius: 30px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+button {
+  background-color: white;
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+}
+.pad-container {
+  /* border: 1px solid red;
+  border-radius: 30px; */
   background-color: aliceblue;
-  width: 500px;
+  width: 800px;
   height: 500px;
   display: flex;
   flex-direction: row;
@@ -22,10 +45,13 @@ body {
 }
 
 .unit {
-  height: 1%;
-  width: 1%;
+  height: 4px;
+  width: 4px;
 }
 
+.active {
+  background-color: black;
+}
 /* .colored {
   background-color: coral;
 } */

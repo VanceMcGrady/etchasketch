@@ -1,19 +1,25 @@
-function createGrid() {
-  const mainContainer = document.querySelector(".main-container");
+const padContainer = document.querySelector(".pad-container");
+const clearBtn = document.querySelector(".clear-btn");
 
+function createGrid() {
   for (let i = 0; i < 30000; i++) {
     const newUnit = document.createElement("div");
     newUnit.classList.add("unit");
-    mainContainer.appendChild(newUnit);
+    padContainer.appendChild(newUnit);
     newUnit.addEventListener(
       "mouseenter",
       function (e) {
-        e.target.style.backgroundColor = "black";
+        e.target.classList.toggle("active");
       },
       { capture: false, once: true }
     );
   }
 }
+
+clearBtn.addEventListener("click", function clearPad() {
+  padContainer.innerHTML = "";
+  createGrid();
+});
 
 createGrid();
 
