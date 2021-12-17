@@ -2,7 +2,7 @@ const padContainer = document.querySelector(".pad-container");
 const clearBtn = document.querySelector(".clear-btn");
 
 function createGrid() {
-  for (let i = 0; i < 30000; i++) {
+  for (let i = 0; i < 10000; i++) {
     const newUnit = document.createElement("div");
     newUnit.classList.add("unit");
     padContainer.appendChild(newUnit);
