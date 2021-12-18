@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const clearBtn = document.querySelector(".clear-btn");
+const colorBtn = document.querySelector(".color-btn");
 
 function createGrid(rows, cols) {
   container.style.setProperty("--grid-rows", rows);
@@ -20,4 +21,4 @@ function clear() {
 
 clearBtn.addEventListener("click", clear);
 
-createGrid(16, 16);
+createGrid(rows, cols);
