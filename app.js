@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const clearBtn = document.querySelector(".clear-btn");
 
 function createGrid(rows, cols) {
   container.style.setProperty("--grid-rows", rows);
@@ -11,5 +12,12 @@ function createGrid(rows, cols) {
     container.appendChild(cell).className = "grid-item";
   }
 }
+
+function clear() {
+  container.innerHTML = "";
+  createGrid(16, 16);
+}
+
+clearBtn.addEventListener("click", clear);
 
 createGrid(16, 16);
