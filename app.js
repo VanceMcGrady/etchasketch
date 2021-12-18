@@ -15,7 +15,7 @@ function createGrid(rows, cols) {
 
 function clear() {
   container.innerHTML = "";
-  createGrid(16, 16);
+  createGrid(64, 64);
 }
 
 clearBtn.addEventListener("click", clear);

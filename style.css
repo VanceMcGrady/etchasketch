@@ -21,18 +21,18 @@ body {
 }
 
 .container {
-  width: auto;
-  height: auto;
+  width: 35em;
+  height: 35em;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   background-color: whitesmoke;
+  overflow: hidden;
 }
 
 .grid-item {
   padding: 0.3em;
-  height: 1em;
-  width: 1em;
+
   text-align: center;
 }
 
