@@ -1,6 +1,14 @@
 const container = document.querySelector(".container");
 const clearBtn = document.querySelector(".clear-btn");
+<<<<<<< HEAD
 const colorBtn = document.querySelector(".color-btn");
+=======
+const slider = document.querySelector(".slider");
+let rows = 16;
+let cols = 16;
+
+console.log(slider.value);
+>>>>>>> 625766a70881fb271b50544300e33efc318ad2bb
 
 function createGrid(rows, cols) {
   container.style.setProperty("--grid-rows", rows);
@@ -16,8 +24,10 @@ function createGrid(rows, cols) {
 
 function clear() {
   container.innerHTML = "";
-  createGrid(64, 64);
+  createGrid(slider.value, slider.value);
 }
+
+slider.addEventListener("mouseup", clear);
 
 clearBtn.addEventListener("click", clear);
 
