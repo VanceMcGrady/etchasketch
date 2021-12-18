@@ -1,12 +1,12 @@
 const container = document.querySelector(".container");
 const clearBtn = document.querySelector(".clear-btn");
 const slider = document.querySelector(".slider");
-const ColorBtn = document.querySelector(".color-btn");
+const colorBtn = document.querySelector(".color-btn");
 let colorIsClicked = false;
 let rows = 16;
 let cols = 16;
 
-console.log(colorIsClicked);
+console.log(colorBtn.innerText);
 
 function createGrid(rows, cols) {
   container.style.setProperty("--grid-rows", rows);
@@ -36,11 +36,13 @@ function getRandomColor() {
   return color;
 }
 
-ColorBtn.addEventListener("click", function () {
+colorBtn.addEventListener("click", function () {
   if (colorIsClicked === false) {
     colorIsClicked = true;
+    colorBtn.innerText = "RANDOM COLOR";
   } else if (colorIsClicked === true) {
     colorIsClicked = false;
+    colorBtn.innerText = "BLACK";
   }
   console.log(colorIsClicked);
 });

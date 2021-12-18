@@ -18,11 +18,13 @@ body {
   padding: 4em;
   border: 1em, solid, red;
   border-radius: 40px;
+  box-sizing: border-box;
+  height: 45em;
 }
 
 .container {
-  width: 35em;
-  height: 35em;
+  width: 30em;
+  height: 30em;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -57,4 +59,8 @@ button {
   padding: 3em;
   width: 10em;
   height: 10em;
+}
+
+button:hover {
+  border: 8px solid hotpink;
 }
